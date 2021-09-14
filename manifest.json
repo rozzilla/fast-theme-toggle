@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Fast theme toggle",
+  "description": "Google Chrome Extension enable to quickly switch the website theme.",
+  "version": "1.0",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "run_at": "document_start",
+      "css": ["theme.css"],
+      "js": ["index.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Toggle theme"
+  },
+  "permissions": ["contextMenus"]
+}
