@@ -1,18 +1,18 @@
 const themeName = "fast-theme-toggle";
 const main = document.querySelector("html").classList;
 
-const isOverrideTheme = () => localStorage.getItem(themeName) === "override";
+const isThemeEnabled = () => localStorage.getItem(themeName) === "enabled";
 
-if (isOverrideTheme()) main.add(themeName);
+if (isThemeEnabled()) main.add(themeName);
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === "toggle-theme") {
-    if (isOverrideTheme()) {
+    if (isThemeEnabled()) {
       main.remove(themeName);
       localStorage.removeItem(themeName);
     } else {
       main.add(themeName);
-      localStorage.setItem(themeName, "override");
+      localStorage.setItem(themeName, "enabled");
     }
   }
 });
