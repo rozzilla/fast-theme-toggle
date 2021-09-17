@@ -4,14 +4,14 @@
   "description": "Google Chrome Extension enable to quickly switch the website theme.",
   "version": "1.0",
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["src/scripts/background.js"]
   },
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
       "run_at": "document_start",
-      "css": ["theme.css"],
-      "js": ["index.js"]
+      "css": ["src/styles/theme.css"],
+      "js": ["src/scripts/index.js"]
     }
   ],
   "browser_action": {
@@ -19,8 +19,8 @@
   },
   "permissions": ["contextMenus"],
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "src/images/icon16.png",
+    "48": "src/images/icon48.png",
+    "128": "src/images/icon128.png"
   }
 }
