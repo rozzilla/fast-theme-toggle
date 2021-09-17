@@ -9,7 +9,12 @@ Fast theme toggle is a Google Chrome Extension that enables to quickly switch th
 ## Installation 💻
 
 At the moment you can install this extension only locally.
-To do so, download the code of this repository (Code > Download ZIP). Then, go on the Chrome extension page, enable the developer mode (upper right corner), and load this package folder.
+Those are the steps:
+* download the code of this repository (Code > Download ZIP)
+* go to the Google Chrome extension page (chrome://extensions/)
+* enable the developer mode (upper right corner)
+* click on the upper left button, to load the unpacked extension
+* unzip the code and upload it
 
 ## Usage ⚡
 
