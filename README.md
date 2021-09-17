@@ -1,6 +1,6 @@
 # Fast theme toggle
 
-![logo](./icon128.png)
+![logo](./src/images/icon128.png)
 
 ## Description 🔭
 
@@ -12,4 +12,4 @@ At the moment you can install this extension only locally.
 
 ## Usage ⚡
 
-Click on the extension icon ![icon](./icon16.png) to toggle the current website theme: that's it!
+Click on the extension icon ![icon](./src/images/icon16.png) to toggle the current website theme: that's it!
