@@ -11,11 +11,11 @@
       "matches": ["https://*/*", "http://*/*"],
       "run_at": "document_start",
       "css": ["src/styles/theme.css"],
-      "js": ["src/scripts/index.js"]
+      "js": ["src/scripts/content.js"]
     }
   ],
   "browser_action": {
-    "default_title": "Toggle theme"
+    "default_title": "Fast theme toggle"
   },
   "permissions": ["contextMenus"],
   "icons": {
