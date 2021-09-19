@@ -1,5 +1,3 @@
-const pathImages = "/src/images";
-
 const changeExtensionIcon = (themeEnabled) => {
   const icon = themeEnabled ? "icon128-enabled.png" : "icon128.png";
 

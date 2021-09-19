@@ -4,19 +4,18 @@ const htmlClasses = document.querySelector("html").classList;
 
 const isThemeEnabled = () => localStorage.getItem(themeName) === enabled;
 
-if (isThemeEnabled()) {
-  htmlClasses.add(themeName);
-  chrome.runtime.sendMessage({ fastThemeToggle: true });
-}
-
-chrome.runtime.onMessage.addListener(() => {
-  if (isThemeEnabled()) {
-    htmlClasses.remove(themeName);
-    localStorage.removeItem(themeName);
-    chrome.runtime.sendMessage({ fastThemeToggle: false });
-  } else {
+const applyTheme = (toEnable) => {
+  if (toEnable) {
     htmlClasses.add(themeName);
     localStorage.setItem(themeName, enabled);
-    chrome.runtime.sendMessage({ fastThemeToggle: true });
+  } else {
+    htmlClasses.remove(themeName);
+    localStorage.removeItem(themeName);
   }
-});
+
+  chrome.runtime.sendMessage({ fastThemeToggle: toEnable });
+};
+
+if (isThemeEnabled()) applyTheme(true);
+
+chrome.runtime.onMessage.addListener(() => applyTheme(!isThemeEnabled()));
