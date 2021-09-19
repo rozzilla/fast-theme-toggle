@@ -1,21 +1,22 @@
+const enabled = "enabled";
 const themeName = "fast-theme-toggle";
-const main = document.querySelector("html").classList;
+const htmlClasses = document.querySelector("html").classList;
 
-const isThemeEnabled = () => localStorage.getItem(themeName) === "enabled";
+const isThemeEnabled = () => localStorage.getItem(themeName) === enabled;
 
 if (isThemeEnabled()) {
-  main.add(themeName);
+  htmlClasses.add(themeName);
   chrome.runtime.sendMessage({ fastThemeToggle: true });
 }
 
 chrome.runtime.onMessage.addListener(() => {
   if (isThemeEnabled()) {
-    main.remove(themeName);
+    htmlClasses.remove(themeName);
     localStorage.removeItem(themeName);
     chrome.runtime.sendMessage({ fastThemeToggle: false });
   } else {
-    main.add(themeName);
-    localStorage.setItem(themeName, "enabled");
+    htmlClasses.add(themeName);
+    localStorage.setItem(themeName, enabled);
     chrome.runtime.sendMessage({ fastThemeToggle: true });
   }
 });
