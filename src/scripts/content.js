@@ -4,6 +4,9 @@ const htmlClasses = document.querySelector("html").classList;
 
 const isThemeEnabled = () => localStorage.getItem(themeName) === enabled;
 
+const enableTabIcon = (activate) =>
+  chrome.runtime.sendMessage({ mainTabIcon: activate });
+
 const applyTheme = (toEnable) => {
   if (toEnable) {
     htmlClasses.add(themeName);
@@ -13,9 +16,20 @@ const applyTheme = (toEnable) => {
     localStorage.removeItem(themeName);
   }
 
-  chrome.runtime.sendMessage({ fastThemeToggle: toEnable });
+  enableTabIcon(toEnable);
 };
 
 if (isThemeEnabled()) applyTheme(true);
 
-chrome.runtime.onMessage.addListener(() => applyTheme(!isThemeEnabled()));
+chrome.runtime.onMessage.addListener((message) => {
+  switch (message) {
+    case "tab-active":
+      enableTabIcon(isThemeEnabled());
+      break;
+    case "tab-click":
+      applyTheme(!isThemeEnabled());
+      break;
+    default:
+      console.warn("Unhandled Chrome tab message", message);
+  }
+});
