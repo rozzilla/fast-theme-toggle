@@ -15,7 +15,7 @@
 
 .fast-theme-toggle button img,
 .fast-theme-toggle button [role="img"],
-.fast-theme-toggle [aria-hidden="true"] {
+.fast-theme-toggle :not(img)[aria-hidden="true"] {
   filter: unset;
 }
 
