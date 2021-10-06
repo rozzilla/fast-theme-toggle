@@ -3,8 +3,6 @@
     "./helper.js"
   );
 
-  if (isThemeEnabled()) applyTheme(true);
-
   chrome.runtime.onMessage.addListener((message) => {
     switch (message) {
       case "tab-active":

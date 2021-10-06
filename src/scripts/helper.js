@@ -18,3 +18,5 @@ export const applyTheme = (toEnable) => {
 
   enableTabIcon(toEnable);
 };
+
+if (isThemeEnabled()) applyTheme(true);
