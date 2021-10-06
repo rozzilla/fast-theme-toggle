@@ -12,8 +12,14 @@
       "run_at": "document_start",
       "css": ["src/styles/theme.css"],
       "js": ["src/scripts/content.js"]
+    },
+    {
+      "matches": ["https://*/*", "http://*/*", "file:///*/*"],
+      "run_at": "document_idle",
+      "js": ["src/scripts/idle.js"]
     }
   ],
+  "web_accessible_resources": ["src/scripts/helper.js"],
   "browser_action": {
     "default_title": "Fast theme toggle"
   },
