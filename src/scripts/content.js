@@ -1,12 +1,10 @@
 (async () => {
-  const { isThemeEnabled, applyTheme, enableTabIcon } = await import(
-    "./helper.js"
-  );
+  const { isThemeEnabled, applyTheme } = await import("./helper.js");
 
   chrome.runtime.onMessage.addListener((message) => {
     switch (message) {
       case "tab-active":
-        enableTabIcon(isThemeEnabled());
+        applyTheme(isThemeEnabled());
         break;
       case "tab-click":
         applyTheme(!isThemeEnabled());

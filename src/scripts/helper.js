@@ -4,9 +4,6 @@ const htmlClasses = document.querySelector("html").classList;
 
 export const isThemeEnabled = () => localStorage.getItem(themeName) === enabled;
 
-export const enableTabIcon = (activate) =>
-  chrome.runtime.sendMessage({ mainTabIcon: activate });
-
 export const applyTheme = (toEnable) => {
   if (toEnable) {
     htmlClasses.add(themeName);
@@ -16,7 +13,7 @@ export const applyTheme = (toEnable) => {
     localStorage.removeItem(themeName);
   }
 
-  enableTabIcon(toEnable);
+  chrome.runtime.sendMessage({ mainTabIcon: toEnable });
 };
 
 if (isThemeEnabled()) applyTheme(true);
