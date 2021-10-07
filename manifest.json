@@ -6,6 +6,7 @@
   "background": {
     "scripts": ["src/scripts/background.js"]
   },
+  "incognito": "split",
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*", "file:///*/*"],
