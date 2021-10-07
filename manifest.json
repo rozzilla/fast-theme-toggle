@@ -6,7 +6,6 @@
   "background": {
     "scripts": ["src/scripts/background.js"]
   },
-  "incognito": "split",
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*", "file:///*/*"],
@@ -24,10 +23,11 @@
   "browser_action": {
     "default_title": "Fast theme toggle"
   },
-  "permissions": ["contextMenus"],
   "icons": {
     "16": "src/images/icon16.png",
     "48": "src/images/icon48.png",
     "128": "src/images/icon128.png"
-  }
+  },
+  "incognito": "split",
+  "permissions": ["contextMenus"]
 }
