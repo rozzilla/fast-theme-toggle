@@ -11,12 +11,12 @@
       "matches": ["https://*/*", "http://*/*", "file:///*/*"],
       "run_at": "document_start",
       "css": ["src/styles/theme.css"],
-      "js": ["src/scripts/content.js"]
+      "js": ["src/scripts/helper.js", "src/scripts/content.js"]
     },
     {
       "matches": ["https://*/*", "http://*/*", "file:///*/*"],
       "run_at": "document_idle",
-      "js": ["src/scripts/idle.js"]
+      "js": ["src/scripts/helper.js"]
     }
   ],
   "web_accessible_resources": ["src/scripts/helper.js"],
