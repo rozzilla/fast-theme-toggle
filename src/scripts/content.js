@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((message) =>
-  iifeHelper.applyTheme(
+  iifeFastThemeToggleHelper.applyTheme(
     message === "tab-click"
-      ? !iifeHelper.isThemeEnabled()
-      : iifeHelper.isThemeEnabled()
+      ? !iifeFastThemeToggleHelper.isThemeEnabled()
+      : iifeFastThemeToggleHelper.isThemeEnabled()
   )
 );

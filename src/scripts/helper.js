@@ -1,4 +1,5 @@
-var iifeHelper = (() => {
+// "Hacky" way to import/export modules inside Google Chrome Extensions
+var iifeFastThemeToggleHelper = (() => {
   const enabled = "enabled";
   const themeName = "fast-theme-toggle";
   const htmlClasses = document.querySelector("html").classList;
