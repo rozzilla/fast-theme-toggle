@@ -4,7 +4,7 @@
 
 ## Description 🔭
 
-Fast theme toggle it's the ultra-ligthweigth, minimal, and easy-to-use Google Chrome Extension that enables to quickly switch the website theme. It allows to change the colors from the 'light' version to 'dark' and vice-versa with no configuration required.
+Fast theme toggle it's the ultra-lightweight, minimal, and easy-to-use Google Chrome Extension that enables to quickly switch the website theme. It allows to change the colors from the 'light' version to 'dark' and vice-versa with no configuration required.
 
 ## Installation 💻
 
