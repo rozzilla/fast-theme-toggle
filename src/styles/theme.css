@@ -5,18 +5,23 @@
 .fast-theme-toggle button,
 .fast-theme-toggle iframe,
 .fast-theme-toggle [role="img"],
-.fast-theme-toggle [style^="background-image:"] {
-  filter: invert(0.88) hue-rotate(180deg) contrast(1.12) saturate(1.12);
+.fast-theme-toggle [style*="background-image:"] {
+  filter: invert(0.9) hue-rotate(180deg) contrast(1.1) saturate(1.1);
 }
 
 .fast-theme-toggle {
   background-color: whitesmoke;
 }
 
+.fast-theme-toggle button,
+.fast-theme-toggle [data-mouse-trigger="click"] {
+  text-shadow: 0 0 15px whitesmoke;
+}
+
 .fast-theme-toggle button img,
 .fast-theme-toggle button [role="img"],
 .fast-theme-toggle
-  :not(img):not([style^="background-image:"])[aria-hidden="true"] {
+  :not(img):not([style*="background-image:"])[aria-hidden="true"] {
   filter: unset;
 }
 
@@ -28,7 +33,7 @@
   .fast-theme-toggle button,
   .fast-theme-toggle iframe,
   .fast-theme-toggle [role="img"],
-  .fast-theme-toggle [style^="background-image:"] {
+  .fast-theme-toggle [style*="background-image:"] {
     filter: unset;
   }
 }
