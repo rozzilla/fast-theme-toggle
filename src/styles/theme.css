@@ -13,11 +13,6 @@
   background-color: whitesmoke;
 }
 
-.fast-theme-toggle button,
-.fast-theme-toggle [data-mouse-trigger="click"] {
-  text-shadow: 0 0 15px whitesmoke;
-}
-
 .fast-theme-toggle button img,
 .fast-theme-toggle button [role="img"],
 .fast-theme-toggle
