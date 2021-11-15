@@ -17,6 +17,11 @@
       "matches": ["https://*/*", "http://*/*", "file:///*/*"],
       "run_at": "document_idle",
       "js": ["src/scripts/helper.js"]
+    },
+    {
+      "matches": ["https://*/*", "http://*/*", "file:///*/*"],
+      "run_at": "document_end",
+      "js": ["src/scripts/end.js"]
     }
   ],
   "web_accessible_resources": ["src/scripts/helper.js"],
