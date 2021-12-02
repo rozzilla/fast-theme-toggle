@@ -7,9 +7,9 @@
 Fast theme toggle it's the ultra-lightweight, minimal, and easy-to-use Google Chrome Extension that enables to quickly switch the website theme. It allows to change the colors from the 'light' version to 'dark' and vice-versa with no configuration required.
 
 ## Installation 💻
+Install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fast-theme-toggle/lplljpoalckodlkgekaaoobggbnhagae/related?hl=it&authuser=0) and pin it for a simpler usage.
 
-At the moment you can install this extension only locally.
-Those are the steps:
+If you want to play with the code and test the extension locally, those are the steps:
 * download the code of this repository (Code > Download ZIP)
 * go to the Google Chrome extension page (chrome://extensions/)
 * enable the developer mode (upper right corner)
