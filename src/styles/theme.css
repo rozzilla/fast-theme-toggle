@@ -10,7 +10,13 @@
 }
 
 .fast-theme-toggle > body {
-  background-color: whitesmoke;
+  background-color: white;
+}
+
+@-moz-document url-prefix() {
+  .fast-theme-toggle > body {
+    background-color: black;
+  }
 }
 
 .fast-theme-toggle button img,
