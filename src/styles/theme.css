@@ -6,7 +6,7 @@
 .fast-theme-toggle iframe,
 .fast-theme-toggle [role="img"],
 .fast-theme-toggle [style*="background-image:"] {
-  filter: invert(0.9) hue-rotate(180deg) contrast(1.1) saturate(1.1);
+  filter: invert(1) hue-rotate(180deg);
 }
 
 .fast-theme-toggle > body {
