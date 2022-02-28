@@ -8,7 +8,7 @@ Fast theme toggle enables to quickly switch the website theme in a ultra-lightwe
 
 ## Installation 💻
 
-Install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fast-theme-toggle/lplljpoalckodlkgekaaoobggbnhagae/related?hl=it&authuser=0) and pin it for a simpler usage.
+Install the extension from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fast-theme-toggle/lplljpoalckodlkgekaaoobggbnhagae/related?hl=it&authuser=0) or the [Firefox Browser Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/fast-theme-toggle/) and pin it for a simpler usage.
 
 ![logo](./installation.gif)
 
