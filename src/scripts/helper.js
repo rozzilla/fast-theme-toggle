@@ -18,6 +18,14 @@ var iifeFastThemeToggleHelper = (() => {
     chrome.runtime.sendMessage({ mainTabIcon: toEnable });
   };
 
+  document.addEventListener("fullscreenchange", () => {
+    if (isThemeEnabled()) {
+      document.fullscreenElement
+        ? htmlClasses.remove(themeName)
+        : htmlClasses.add(themeName);
+    }
+  });
+
   if (isThemeEnabled()) applyTheme(true);
 
   return {

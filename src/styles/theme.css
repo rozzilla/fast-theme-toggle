@@ -27,17 +27,3 @@
   :not(img):not([style*="background-image:"])[aria-hidden="true"] {
   filter: unset;
 }
-
-@media all and (display-mode: fullscreen) {
-  .fast-theme-toggle,
-  .fast-theme-toggle img,
-  .fast-theme-toggle svg,
-  .fast-theme-toggle image,
-  .fast-theme-toggle video,
-  .fast-theme-toggle button,
-  .fast-theme-toggle iframe,
-  .fast-theme-toggle [role="img"],
-  .fast-theme-toggle [style*="background-image:"] {
-    filter: unset;
-  }
-}
