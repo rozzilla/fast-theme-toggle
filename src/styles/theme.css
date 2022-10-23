@@ -1,12 +1,14 @@
 .fast-theme-toggle,
 .fast-theme-toggle img,
 .fast-theme-toggle svg,
+.fast-theme-toggle .jpg,
+.fast-theme-toggle .png,
 .fast-theme-toggle image,
 .fast-theme-toggle video,
 .fast-theme-toggle button,
 .fast-theme-toggle iframe,
 .fast-theme-toggle [role="img"],
-.fast-theme-toggle [style*="background"],
+.fast-theme-toggle [style*="background-image"],
 .fast-theme-toggle div[role="tabpanel"] svg image {
   filter: invert(1) hue-rotate(180deg);
 }
@@ -24,9 +26,10 @@
 .fast-theme-toggle button img,
 .fast-theme-toggle button [role="img"],
 .fast-theme-toggle svg g[clip-path] image,
-.fast-theme-toggle span[style*="background"],
+.fast-theme-toggle span[style*="background-image"],
 .fast-theme-toggle svg[width="100%"][height="100%"],
 .fast-theme-toggle div[role="tabpanel"] > div > svg,
-.fast-theme-toggle :not(img):not([style*="background"])[aria-hidden="true"] {
+.fast-theme-toggle
+  :not(img):not([style*="background-image"])[aria-hidden="true"] {
   filter: unset;
 }
