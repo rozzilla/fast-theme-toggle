@@ -8,6 +8,7 @@
 .fast-theme-toggle button,
 .fast-theme-toggle iframe,
 .fast-theme-toggle [role="img"],
+.fast-theme-toggle [background],
 .fast-theme-toggle [style*="background-image"],
 .fast-theme-toggle div[role="tabpanel"] svg image {
   filter: invert(1) hue-rotate(180deg);
