@@ -1,23 +1,30 @@
-const changeExtensionIcon = (themeEnabled) => {
+const changeExtensionIcon = async (themeEnabled) => {
   const icon = themeEnabled ? "icon128-enabled.png" : "icon128.png";
 
-  chrome.tabs.query(
-    { active: true, windowType: "normal", currentWindow: true },
-    (tab) => {
-      chrome.browserAction.setIcon({
-        path: `/src/images/${icon}`,
-        tabId: tab[0].id,
-      });
-    }
-  );
+  const tabs = await chrome.tabs.query({
+    active: true,
+    windowType: "normal",
+    currentWindow: true,
+  });
+
+  if (tabs[0]) {
+    await chrome.action.setIcon({
+      path: `/src/images/${icon}`,
+      tabId: tabs[0].id,
+    });
+  }
 };
 
-chrome.browserAction.onClicked.addListener((tabs) =>
-  chrome.tabs.sendMessage(tabs.id, "tab-click")
+chrome.action.onClicked.addListener((tab) =>
+  chrome.tabs
+    .sendMessage(tab.id, "tab-click")
+    .catch((msg) => console.debug(msg))
 );
 
-chrome.tabs.onActivated.addListener((tabs) =>
-  chrome.tabs.sendMessage(tabs.tabId, "tab-active")
+chrome.tabs.onActivated.addListener((activeInfo) =>
+  chrome.tabs
+    .sendMessage(activeInfo.tabId, "tab-active")
+    .catch((msg) => console.debug(msg))
 );
 
 chrome.runtime.onMessage.addListener((msg) =>
