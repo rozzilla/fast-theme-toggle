@@ -1,0 +1,26 @@
+name: Create browser extension
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  zip-files:
+    name: Create and Upload Zip
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create zip file
+        run: |
+          mkdir -p artifacts
+          zip -r artifacts/browser-extension.zip src manifest.json
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: browser-extension
+          path: artifacts/browser-extension.zip
