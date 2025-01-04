@@ -24,3 +24,7 @@ jobs:
         with:
           name: browser-extension
           path: artifacts/browser-extension.zip
+
+      - name: Display artifact link
+        run: |
+          echo "Artifact URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}#artifact"
