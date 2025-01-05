@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Fast theme toggle",
-  "description": "Fast theme toggle enable to quickly switch the website theme.",
-  "version": "1.0.14",
+  "description": "Fast theme toggle enable to quickly switch the website theme",
+  "version": "1.0.15",
   "background": {
     "service_worker": "src/scripts/background.js",
     "type": "module"

@@ -16,14 +16,15 @@ jobs:
 
       - name: Create zip file
         run: |
-          mkdir -p artifacts
-          zip -r artifacts/browser-extension.zip src manifest.json
+          mkdir -p browser-extension
+          cp -r src browser-extension
+          cp manifest.json browser-extension
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: browser-extension
-          path: artifacts/browser-extension.zip
+          path: browser-extension
 
       - name: Display artifact link
         run: |
