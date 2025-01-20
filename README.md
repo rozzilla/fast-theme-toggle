@@ -4,7 +4,7 @@
 
 ## Description 🔭
 
-Fast theme toggle enables to quickly switch the website theme in a ultra-lightweight, minimal, and easy-to-use way. It allows to change the colors from the 'light' version to 'dark' and vice-versa with no configuration required.
+Fast theme toggle enables to quickly switch the website theme in a ultra-lightweight, minimal, and easy-to-use way. It allows to change the colors from the 'light' version to 'dark' and vice-versa with no configuration required ([demo](https://www.youtube.com/watch?v=PV551Jlmf3I)).
 
 ## Installation 💻
 
